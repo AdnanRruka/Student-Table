@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const usersSchema = new mongoose.Schema({
+const studentSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -12,17 +12,14 @@ const usersSchema = new mongoose.Schema({
     address: {
         city: {
             type: String,
-            required: true
         },
         street: {
             type: String,
-            required: true
         },
         zipcode: {
             type: String,
-            required: true
         }
     }
 })
 
-module.exports = mongoose.model('Users', usersSchema)
+module.exports = mongoose.model('Student', studentSchema)
